@@ -1,0 +1,10 @@
+0,Patna,Bihar,800001
+1,Mumbai,Maharashtra,400001
+2,Delhi,Delhi,110001
+3,Bangalore,Karnataka,560001
+4,Hyderabad,Andhra Pradesh,500001
+5,Chennai,Tamil Nadu,600024
+6,Kolkata,West Bengal,700001
+7,Jaipur,Rajasthan,302001
+8,Lucknow,Uttar Pradesh,226001
+9,Bhopal,Madhya Pradesh,462003

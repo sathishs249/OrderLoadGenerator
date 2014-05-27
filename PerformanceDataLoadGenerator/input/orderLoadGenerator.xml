@@ -1,0 +1,10 @@
+<OrderLoadGenerator>
+	<OrderPacing NumberOfOrders="5" OrdersPerHour="4000" NumberOfThreads="5" />
+	<OrderItemProfile ProfileTable="" CreateDerivedTable="T" />
+	<OrderSizeProfile ProfileTable="" CreateDerivedTable="T" />
+	<OrderLineQty ProfileTable="" CreateDerivedTable="T" />
+	<PersonInfoGenerator>
+		<FirstName File="F:\\FromPC\\Sathish\\Performance\\PerformanceDataLoadGenerator\\input\\example.txt" Count="3"/>
+		<LastName File="F:\\FromPC\\Sathish\\Performance\\PerformanceDataLoadGenerator\\input\\example1.txt" Count="3" />	
+	</PersonInfoGenerator>
+</OrderLoadGenerator>
