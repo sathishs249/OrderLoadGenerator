@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Random;
 
+import com.gsot.personinfo.AddressObject;
+
 public class FileProcessing {
 	
 	public static  ArrayList<String> getFistNameList(String file,String count) throws IOException{

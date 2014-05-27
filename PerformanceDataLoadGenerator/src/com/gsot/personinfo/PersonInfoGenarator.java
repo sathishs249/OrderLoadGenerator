@@ -1,6 +1,5 @@
 package com.gsot.personinfo;
 
-package com.gsot.personinfo;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -8,7 +7,7 @@ import java.util.Random;
 
 import com.yantra.yfc.dom.YFCDocument;
 import com.yantra.yfc.dom.YFCElement;
-import  scala.collection.JavaConversions; 
+//import  scala.collection.JavaConversions; 
 //import static com.gsot.personinfo.PersonInfoGen;
 public class PersonInfoGenarator {
 
