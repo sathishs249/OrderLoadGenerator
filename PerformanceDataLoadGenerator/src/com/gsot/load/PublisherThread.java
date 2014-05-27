@@ -3,6 +3,7 @@
  */
 package com.gsot.load;
 
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -11,6 +12,7 @@ import java.util.Date;
 import javax.jms.JMSException;
 import javax.naming.NamingException;
 
+import com.gsot.personinfo.PersonInfoGenarator;
 import com.gsot.utils.JMSPublisher;
 
 /**
@@ -36,18 +38,23 @@ class PublisherThread implements Runnable {
 	@Override
 	public void run() {
 		JMSPublisher publisher = new JMSPublisher();
+		PersonInfoGenarator pig = new PersonInfoGenarator();
 		
 		for (int i = 0; i < ordersPerThread; i++) {
 			System.out.println("Publish the message - " + i);
 			String message="";
 			try {
-				publisher.publishMessage(message);
+				//pig.getPersonInfoXML();
+				publisher.publishMessage(pig.getPersonInfoXML());
 			} catch (JMSException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			} catch (NamingException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 			try {
 

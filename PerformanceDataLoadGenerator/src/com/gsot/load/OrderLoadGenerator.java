@@ -34,11 +34,11 @@ public class OrderLoadGenerator {
 
 	}
 
-	private void personInfoGenerator() throws IOException {
-		YFCDocument orderLoadGenerator = YFCDocument.getDocumentForXMLFile("F:\\FromPC\\Sathish\\Performance\\PerformanceDataLoadGenerator\\input\\orderLoadGenerator.xml");
-		PersonInfoGenarator personInfoGen = new PersonInfoGenarator();
-		personInfoGen.process(orderLoadGenerator);
-	}
+//	private void personInfoGenerator() throws IOException {
+//		YFCDocument orderLoadGenerator = YFCDocument.getDocumentForXMLFile("F:\\FromPC\\Sathish\\Performance\\PerformanceDataLoadGenerator\\input\\orderLoadGenerator.xml");
+//		PersonInfoGenarator personInfoGen = new PersonInfoGenarator();
+//		personInfoGen.process(orderLoadGenerator);
+//	}
 
 	private static void process() throws InterruptedException {
 

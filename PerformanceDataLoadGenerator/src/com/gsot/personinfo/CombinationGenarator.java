@@ -60,7 +60,7 @@ public class CombinationGenarator {
 	}
 	
 	private static AddressObject getCityZip(int value) throws IOException{
-		String file = "F:\\FromPC\\Sathish\\Performance\\PerformanceDataLoadGenerator\\input\\cityzip.txt";
+		String file = "F:\\Sathish\\Workspace\\OrderLoadGenerator\\PerformanceDataLoadGenerator\\input\\cityzip.txt";
 	
 		LinkedHashMap<String, ArrayList<String>> Listcityzip = FileProcessing.listcityzip(file);
 		int cityzipsize = Listcityzip.size();

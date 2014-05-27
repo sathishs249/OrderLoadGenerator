@@ -17,8 +17,8 @@ public class PersonInfoGenarator {
 	 * @throws NumberFormatException 
 	 */
 	public static void main(String[] args) throws NumberFormatException, IOException {
-		//get input XML pass the values to there methods
-		YFCDocument orderLoadGenerator = YFCDocument.getDocumentForXMLFile("F:\\FromPC\\Sathish\\Performance\\PerformanceDataLoadGenerator\\input\\orderLoadGenerator.xml");
+		//get input XML pass the values to there methods   F:\Sathish\Workspace\OrderLoadGenerator\PerformanceDataLoadGenerator\input\orderLoadGenerator.xml
+		YFCDocument orderLoadGenerator = YFCDocument.getDocumentForXMLFile("F:\\Sathish\\Workspace\\OrderLoadGenerator\\PerformanceDataLoadGenerator\\input\\orderLoadGenerator.xml");
 		YFCElement orderLoadGeneratorEle = orderLoadGenerator.getDocumentElement();
 		YFCElement orderPacing = orderLoadGeneratorEle.getChildElement("OrderPacing");
 		String numberOfOrders = orderPacing.getAttribute("NumberOfOrders");
@@ -28,6 +28,11 @@ public class PersonInfoGenarator {
 			String personInfoBillToDoc= process(orderLoadGenerator);
 			System.out.println("peronInfo bill to :"+ i+ " values :"+personInfoBillToDoc);
 		}	
+	}
+	
+	public String getPersonInfoXML() throws IOException{
+		YFCDocument orderLoadGenerator = YFCDocument.getDocumentForXMLFile("F:\\Sathish\\Workspace\\OrderLoadGenerator\\PerformanceDataLoadGenerator\\input\\orderLoadGenerator.xml");
+		return process(orderLoadGenerator);
 	}
 	
 	private static String process(YFCDocument orderLoadGenerator) throws IOException{
