@@ -58,7 +58,7 @@ public class CombinationGenarator {
 	}
 	
 	private static AddressObject getCityZip(int value) throws IOException{
-		String file = "C:\\Users\\GSOT\\Desktop\\exlipse\\test1\\Perfomance\\inputs\\cityzip.txt";
+		String file = "F:\\FromPC\\Sathish\\Performance\\PerformanceDataLoadGenerator\\input\\cityzip.txt";
 	
 		LinkedHashMap<String, ArrayList<String>> Listcityzip = FileProcessing.listcityzip(file);
 		int cityzipsize = Listcityzip.size();
