@@ -19,7 +19,7 @@ public class PersonInfoGenarator {
 	 */
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		//get input XML pass the values to there methods
-		YFCDocument orderLoadGenerator = YFCDocument.getDocumentForXMLFile("C:\\Users\\GSOT\\Desktop\\exlipse\\test1\\Perfomance\\inputs\\orderLoadGenerator.xml");
+		YFCDocument orderLoadGenerator = YFCDocument.getDocumentForXMLFile("F:\\FromPC\\Sathish\\Performance\\PerformanceDataLoadGenerator\\input\\orderLoadGenerator.xml");
 		YFCElement orderLoadGeneratorEle = orderLoadGenerator.getDocumentElement();
 		YFCElement orderPacing = orderLoadGeneratorEle.getChildElement("OrderPacing");
 		String numberOfOrders = orderPacing.getAttribute("NumberOfOrders");
