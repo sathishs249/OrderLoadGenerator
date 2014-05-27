@@ -44,8 +44,8 @@ public class FileProcessing {
         }
         return  lastnameList;
 	}
-	public static  LinkedHashMap<String, ArrayList<String>> listcityzip() throws IOException{
-		BufferedReader in = new BufferedReader(new FileReader("F:\\FromPC\\Sathish\\Performance\\PerformanceDataLoadGenerator\\input\\cityzip.txt"));
+	public static  LinkedHashMap<String, ArrayList<String>> listcityzip(String file) throws IOException{
+		BufferedReader in = new BufferedReader(new FileReader(file));
 		 LinkedHashMap<String, ArrayList<String>> map = new LinkedHashMap<String, ArrayList<String>>();      
 			String lines = "";
 	        while (((lines = in.readLine()) != null)) {
@@ -59,42 +59,26 @@ public class FileProcessing {
 	        }
 	        in.close();
 	       return  map;
-	       
-		/*LinkedHashMap<String, ArrayList<String>> map = new LinkedHashMap<String, ArrayList<String>>();      
-		ArrayList<String> list =new ArrayList<String>();
-		String line = "";
-        while (((line = in.readLine()) != null)) {
-        	String parts[] = line.split(",");
-        	String val = ""+value;
-        	if(parts[0].equals(val)){
-        		list.add(parts[1]);
-            	list.add(parts[2]);
-            	list.add(parts[3]);
-            	map.put(parts[0], list);
-        	}
-        }
-        in.close();
-       System.out.println("map :"+map.toString());
-        return  map;*/
 	}
-	public static  LinkedHashMap<String, ArrayList<String>> getcityzip(int value) throws IOException{
-		System.out.println("city zip value :"+value);
-		BufferedReader in = new BufferedReader(new FileReader("F:\\FromPC\\Sathish\\Performance\\PerformanceDataLoadGenerator\\input\\cityzip.txt"));
-		LinkedHashMap<String, ArrayList<String>> map = new LinkedHashMap<String, ArrayList<String>>();      
-		ArrayList<String> list =new ArrayList<String>();
+	public static  LinkedHashMap<String, AddressObject> getcityzip(int value,String file) throws IOException{
+		//System.out.println("city zip value :"+value);
+		BufferedReader in = new BufferedReader(new FileReader(file));
+		LinkedHashMap<String, AddressObject> map = new LinkedHashMap<String, AddressObject>();      
+		AddressObject addressObject  = new AddressObject();
 		String line = "";
         while (((line = in.readLine()) != null)) {
         	String parts[] = line.split(",");
         	String val = ""+value;
         	if(parts[0].equals(val)){
-        		list.add(parts[1]);
-            	list.add(parts[2]);
-            	list.add(parts[3]);
-            	map.put(parts[0], list);
+        		addressObject.setCity(parts[1]);
+        		addressObject.setState(parts[2]);
+        		addressObject.setZipcode(parts[3]);
+        	
+            	map.put(parts[0], addressObject);
         	}
         }
         in.close();
-       System.out.println("get in city zip map :"+map.toString());
+       //System.out.println("get in city zip map :"+map.toString());
         return  map;
 	}
 }
